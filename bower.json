@@ -1,0 +1,30 @@
+{
+  "name": "phantomnet.ui",
+  "version": "1.0.0",
+  "homepage": "https://github.com/green-grass/phantomnet.ui",
+  "authors": [
+    "Minh Nguyen <mnguyen284@gmail.com>"
+  ],
+  "description": "PhantomNet UI framework",
+  "main": "less/phantomnet.less",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexslider": "~2.5.0",
+    "stellar": "~0.6.2",
+    "bootstrap": "~3.3.5"
+  }
+}

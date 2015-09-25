@@ -1,0 +1,31 @@
+@import "./flexslider/variables.less";
+
+@font-path: "../../fonts";
+@flexslider-margin: 0;
+
+@import "./flexslider/mixins.less";
+@import "./flexslider/font.less";
+@import "./flexslider/resets.less";
+@import "./flexslider/base.less";
+@import "./flexslider/theme.less";
+@import "./flexslider/responsive.less";
+
+.flex-direction-nav a {
+    line-height: 1;
+}
+
+.flexslider-fill-height {
+    border: 0;
+    border-radius: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    .slides {
+        &, > li {
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
