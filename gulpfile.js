@@ -1,4 +1,5 @@
 ﻿var gulp = require("gulp"),
+    rimraf = require("rimraf"),
     less = require("gulp-less"),
     path = require("path");
 
@@ -7,21 +8,30 @@ var paths = {
 
     less_flexslider_local: "./src/less/flexslider",
     less_local: "./src/less/phantomnet.less",
-    
+
     fonts_source: [
         "./bower_components/flexslider/fonts/*"
     ],
     js_src: [
-        "./bower_components/jquery/dist/jquery.js",
         "./bower_components/flexslider/jquery.flexslider.js",
-        "./bower_components/stellar/jquery.stellar.js",
         "./src/js/*.js"
     ],
-    
+
+    dist: "./dist",
     css_dist: "./dist/css",
     fonts_dist: "./dist/fonts",
     js_dist: "./dist/js"
 };
+
+gulp.task("clean:local", function (cb) {
+    rimraf(paths.less_flexslider_local, cb);
+});
+
+gulp.task("clean:dist", function (cb) {
+    rimraf(paths.dist, cb);
+});
+
+gulp.task("clean", ["clean:dist", "clean:local"]);
 
 gulp.task("consolidate:less:flexslider", function () {
     gulp.src(paths.less_flexslider_lib)
@@ -51,4 +61,4 @@ gulp.task("dist:js", function () {
 
 gulp.task("dist", ["dist:less", "dist:fonts", "dist:js"]);
 
-gulp.task("default", ["consolidate", "dist"]);
+gulp.task("default", ["dist"]);

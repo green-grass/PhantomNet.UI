@@ -23,8 +23,10 @@
     "tests"
   ],
   "dependencies": {
-    "flexslider": "~2.5.0",
-    "stellar": "~0.6.2",
-    "bootstrap": "~3.3.5"
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "flexslider": "~2.5.0"
   }
 }
