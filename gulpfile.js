@@ -4,16 +4,14 @@
     path = require("path");
 
 var paths = {
-    less_flexslider_lib: "./bower_components/flexslider/css/*",
+    less_bootstrap_lib: "./bower_components/bootstrap/less/variables.less",
 
-    less_flexslider_local: "./src/less/flexslider",
-    less_local: "./src/less/phantomnet.less",
-
-    fonts_source: [
-        "./bower_components/flexslider/fonts/*"
+    less_bootstrap_local: "./src/less/bootstrap",
+    
+    less_src: "./src/less/phantomnet.less",
+    fonts_src: [
     ],
     js_src: [
-        "./bower_components/flexslider/jquery.flexslider.js",
         "./src/js/*.js"
     ],
 
@@ -24,7 +22,7 @@ var paths = {
 };
 
 gulp.task("clean:local", function (cb) {
-    rimraf(paths.less_flexslider_local, cb);
+    rimraf(paths.less_bootstrap_local, cb);
 });
 
 gulp.task("clean:dist", function (cb) {
@@ -33,24 +31,26 @@ gulp.task("clean:dist", function (cb) {
 
 gulp.task("clean", ["clean:dist", "clean:local"]);
 
-gulp.task("consolidate:less:flexslider", function () {
-    gulp.src(paths.less_flexslider_lib)
-        .pipe(gulp.dest(paths.less_flexslider_local));
+gulp.task("consolidate:less:bootstrap", function () {
+    gulp.src(paths.less_bootstrap_lib)
+        .pipe(gulp.dest(paths.less_bootstrap_local));
 });
 
-gulp.task("consolidate:less", ["consolidate:less:flexslider"]);
+
+gulp.task("consolidate:less", ["consolidate:less:bootstrap"]);
 gulp.task("consolidate", ["consolidate:less"]);
 
 gulp.task("dist:less", function () {
-    return gulp.src(paths.less_local)
-        .pipe(less({
+    return gulp.src(paths.
+    less_src)
+       .pipe(less({
             relativeUrls: true
         }))
         .pipe(gulp.dest(paths.css_dist));
 });
 
 gulp.task("dist:fonts", function () {
-    gulp.src(paths.fonts_source)
+    gulp.src(paths.fonts_src)
         .pipe(gulp.dest(paths.fonts_dist));
 });
 
