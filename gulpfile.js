@@ -36,7 +36,6 @@ gulp.task("consolidate:less:bootstrap", function () {
         .pipe(gulp.dest(paths.less_bootstrap_local));
 });
 
-
 gulp.task("consolidate:less", ["consolidate:less:bootstrap"]);
 gulp.task("consolidate", ["consolidate:less"]);
 

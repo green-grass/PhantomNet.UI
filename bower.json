@@ -1,7 +1,7 @@
 {
-  "name": "phantomnet.ui",
+  "name": "phantomnet-ui",
   "version": "3.0.0-beta7",
-  "homepage": "https://github.com/green-grass/phantomnet.ui",
+  "homepage": "https://github.com/green-grass/phantomnet-ui",
   "authors": [
     "Minh Nguyen <mnguyen284@gmail.com>"
   ],

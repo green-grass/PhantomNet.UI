@@ -1,1 +1,1 @@
-# phantomnet.ui
+# phantomnet-ui

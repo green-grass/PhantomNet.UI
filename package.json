@@ -1,10 +1,10 @@
 {
-  "name": "phantomnet.ui",
+  "name": "phantomnet-ui",
   "version": "1.0.0",
   "description": "PhantomNet UI framework",
   "repository": {
     "type": "git",
-    "url": "https://github.com/green-grass/phantomnet.ui.git"
+    "url": "https://github.com/green-grass/phantomnet-ui.git"
   },
   "license": "MIT",
   "devDependencies": {
