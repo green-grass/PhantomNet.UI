@@ -1,7 +1,6 @@
 ﻿var gulp = require("gulp"),
     rimraf = require("rimraf"),
-    less = require("gulp-less"),
-    path = require("path");
+    less = require("gulp-less");
 
 var paths = {
     less_bootstrap_lib: "./bower_components/bootstrap/less/variables.less",
@@ -40,9 +39,8 @@ gulp.task("consolidate:less", ["consolidate:less:bootstrap"]);
 gulp.task("consolidate", ["consolidate:less"]);
 
 gulp.task("dist:less", function () {
-    return gulp.src(paths.
-    less_src)
-       .pipe(less({
+    gulp.src(paths.less_src)
+        .pipe(less({
             relativeUrls: true
         }))
         .pipe(gulp.dest(paths.css_dist));

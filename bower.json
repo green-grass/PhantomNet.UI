@@ -6,7 +6,7 @@
     "Minh Nguyen <mnguyen284@gmail.com>"
   ],
   "description": "PhantomNet UI framework",
-  "main": "less/phantomnet.less",
+  "main": "src/less/phantomnet.less",
   "moduleType": [
     "amd",
     "es6",
