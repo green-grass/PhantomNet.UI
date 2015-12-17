@@ -3,6 +3,7 @@
 /* ---------------------------------------------- */
 
 $(function () {
+    "use strict";
 
     var defaults = {
         offset: 0,

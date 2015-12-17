@@ -1,5 +1,4 @@
 (function (window, document, undefined) {
-
     "use strict";
 
     if (window.GG !== undefined) {
